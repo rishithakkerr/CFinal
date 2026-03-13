@@ -37,7 +37,7 @@ int main()
 
     for(int i=0;i<4;i++)
     {
-        for(int h=0;h<5;h++)
+        for(int j=0;j<5;j++)
         {
             if(row == 2)
             {
