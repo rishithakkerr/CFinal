@@ -8,23 +8,29 @@ int main()
     string times[5] = {"10-11","11-12","12-1","1-2","2-3"};
 
     string timetable[5][5];
+    string facultyTable[5][5];
 
     for(int i=0;i<5;i++)
     {
         for(int j=0;j<5;j++)
         {
             timetable[i][j] = "-";
+            facultyTable[i][j] = "-";
         }
     }
 
     string courses[4];
+    string faculty[4];
 
-    cout<<"\nEnter 4 course names\n";
+    cout<<"\nEnter details for 4 courses\n";
 
     for(int i=0;i<4;i++)
     {
-        cout<<"Enter Course Name: ";
+        cout<<"\nEnter Course Name: ";
         cin>>courses[i];
+
+        cout<<"Enter Faculty Name: ";
+        cin>>faculty[i];
     }
 
     int row = 0;
@@ -40,6 +46,7 @@ int main()
             }
 
             timetable[row][col] = courses[i];
+            facultyTable[row][col] = faculty[i];
 
             col++;
 
@@ -72,6 +79,19 @@ int main()
                 cout<<timetable[i][j]<<"\t";
         }
 
+                cout<<endl;
+
+        cout<<"\t";
+
+        for(int j=0;j<5;j++)
+        {
+            if(i == 2)
+                cout<<" \t";
+            else
+                cout<<facultyTable[i][j]<<"\t";
+        }
+
+        cout<<endl;
         cout<<endl;
     }
 
