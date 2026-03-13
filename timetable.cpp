@@ -64,30 +64,30 @@ int main()
 
     cout<<"\nGenerated Timetable\n\n";
 
-    cout<<"\tMon\tTue\tWed\tThu\tFri\n";
+    cout<<"\t\tMon\t\tTue\t\tWed\t\tThu\t\tFri\n";
 
     for(int i=0;i<5;i++)
     {
-        cout<<times[i]<<"\t";
+        cout<<times[i]<<"\t\t";
 
         for(int j=0;j<5;j++)
         {
             if(i == 2)
-                cout<<"BREAK\t";
+                cout<<"BREAK\t\t";
             else
-                cout<<timetable[i][j]<<"\t";
+                cout<<timetable[i][j]<<"\t\t";
         }
 
                 cout<<endl;
 
-        cout<<"\t";
+        cout<<"\t\t";
 
         for(int j=0;j<5;j++)
         {
             if(i == 2)
-                cout<<" \t";
+                cout<<" \t\t";
             else
-                cout<<facultyTable[i][j]<<"\t";
+                cout<<facultyTable[i][j]<<"\t\t";
         }
 
         cout<<endl;
