@@ -4,7 +4,6 @@ using namespace std;
 
 int main()
 {
-    string days[5] = {"Mon","Tue","Wed","Thu","Fri"};
     string times[5] = {"10-11","11-12","12-1","1-2","2-3"};
 
     string timetable[5][5];
