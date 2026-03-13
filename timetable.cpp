@@ -2,13 +2,6 @@
 #include<string>
 using namespace std;
 
-struct Course
-{
-    string name;
-    string faculty;
-    int hours;
-};
-
 int main()
 {
     string days[5] = {"Mon","Tue","Wed","Thu","Fri"};
@@ -24,19 +17,14 @@ int main()
         }
     }
 
-    Course courses[4];
+    string courses[4];
 
-    cout<<"\nEnter details for 4 courses\n";
+    cout<<"\nEnter 4 course names\n";
 
     for(int i=0;i<4;i++)
     {
-        cout<<"\nEnter Course Name: ";
-        cin>>courses[i].name;
-
-        cout<<"Enter Faculty Name: ";
-        cin>>courses[i].faculty;
-
-        courses[i].hours = 5;
+        cout<<"Enter Course Name: ";
+        cin>>courses[i];
     }
 
     int row = 0;
@@ -44,14 +32,14 @@ int main()
 
     for(int i=0;i<4;i++)
     {
-        for(int h=0; h<courses[i].hours; h++)
+        for(int h=0;h<5;h++)
         {
             if(row == 2)
             {
                 row++;
             }
 
-            timetable[row][col] = courses[i].name;
+            timetable[row][col] = courses[i];
 
             col++;
 
@@ -87,6 +75,5 @@ int main()
         cout<<endl;
     }
 
-    cout<<"\n";
     return 0;
 }
