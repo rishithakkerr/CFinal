@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    //Initialisation
     string times[5] = {"10-11","11-12","12-1","1-2","2-3"};
 
     string timetable[5][5];
@@ -32,6 +33,8 @@ int main()
         cin>>faculty[i];
     }
 
+    //Logic:
+
     int row = 0;
     int col = 0;
 
@@ -54,17 +57,14 @@ int main()
                 col = 0;
                 row++;
             }
-
-            if(row == 5)
-            {
-                row = 0;
-            }
         }
     }
 
+    //Printing:
+
     cout<<"\nGenerated Timetable\n\n";
 
-    cout<<"\t\tMon\t\tTue\t\tWed\t\tThu\t\tFri\n";
+    cout<<"\t\tMon\t\tTue\t\tWed\t\tThu\t\tFri\n\n";
 
     for(int i=0;i<5;i++)
     {
@@ -78,8 +78,7 @@ int main()
                 cout<<timetable[i][j]<<"\t\t";
         }
 
-                cout<<endl;
-
+        cout<<endl;
         cout<<"\t\t";
 
         for(int j=0;j<5;j++)
